@@ -66,6 +66,8 @@ if(ANDROID)
   set(MBEDTLS_ROOT_DIR ${MBEDTLS_NDK})
   set(MBEDTLS_INCLUDE_DIR ${MBEDTLS_NDK}/include)
   set(MBEDTLS_CRYPTO_LIBRARY ${MBEDTLS_NDK}/lib/libmbedcrypto.a)
+  set(MBEDTLS_SSL_LIBRARY ${MBEDTLS_NDK}/lib/libmbedtls.a)
+  set(MBEDTLS_X509_LIBRARY ${MBEDTLS_NDK}/lib/libmbedx509.a)
 
 endif()
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -78,11 +80,15 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
   set(MBEDTLS_INCLUDE_DIR ${MBEDTLS_ROOT_DIR}/include)
   # Dynamic MbedTLS library does not work on MacOS.  Just link in static
   set(MBEDTLS_CRYPTO_LIBRARY ${MBEDTLS_ROOT_DIR}/lib/libmbedcrypto.a)
+  set(MBEDTLS_SSL_LIBRARY ${MBEDTLS_ROOT_DIR}/lib/libmbedtls.a)
+  set(MBEDTLS_X509_LIBRARY ${MBEDTLS_ROOT_DIR}/lib/libmbedx509.a)
 endif()
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
   set(MBEDTLS_ROOT_DIR "/usr/local")
   set(MBEDTLS_INCLUDE_DIR ${MBEDTLS_ROOT_DIR}/include)
   set(MBEDTLS_CRYPTO_LIBRARY ${MBEDTLS_ROOT_DIR}/lib64/libmbedcrypto.so)
+  set(MBEDTLS_SSL_LIBRARY ${MBEDTLS_ROOT_DIR}/lib64/libmbedtls.so)
+  set(MBEDTLS_X509_LIBRARY ${MBEDTLS_ROOT_DIR}/lib64/libmbedx509.so)
 endif()
 
 #
@@ -96,7 +102,7 @@ if(OF_OPENSSL)
 endif()
 
 if(OF_MBEDTLS)
-  list(APPEND crypto_library_list ${MBEDTLS_CRYPTO_LIBRARY})
+  list(APPEND crypto_library_list ${MBEDTLS_SSL_LIBRARY} ${MBEDTLS_X509_LIBRARY} ${MBEDTLS_CRYPTO_LIBRARY})
 endif()
 
 if(OF_GNUTLS)
