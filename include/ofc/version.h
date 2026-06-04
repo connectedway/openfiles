@@ -38,7 +38,7 @@
  *
  * May be a commit id, tag, or id.
  */
-#define OFC_SHARE_TAG "5.3.8"
+#define OFC_SHARE_TAG "5.3.9"
 
 /** \} */
 
