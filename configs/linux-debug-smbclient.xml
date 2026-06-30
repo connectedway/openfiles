@@ -19,7 +19,7 @@
       <map>
         <drive>test</drive>
         <description>Remote for test_file</description>
-        <path>//user:happy@127.0.0.1:445/spiritcloud/</path>
+        <path>//vnc:happy@127.0.0.1:445/foobar/</path>
       </map>
     </drives>
     <smb>
