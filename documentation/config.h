@@ -16,9 +16,7 @@ group include files as follows:
 - identity configuration
 - limit configurations
 
-======================
-Platform Configuration
-======================
+### Platform Configuration
 
 A platform configuration file defines the compile type definitions
 required to support the platform.
@@ -54,9 +52,7 @@ OFC_LOOPBACK | ON/OFF | Configure a loopback Address
 OFC_MULTI_TCP | ON/OFF | Listen on Each TCP Interface
 OFC_MULTI_UDP | ON/OFF | Listen on Each UDP Interface
 
-======================
-Behavior Configuration
-======================
+### <a name="behavior"></a>Behavior Configuration
 
 A behavior configuration file defines the Open Stack behavior for 
 the various platforms.
@@ -90,9 +86,7 @@ OFC_UNLOAD_SMB | __attribute__((destructor(105))) | Macro to specify auto unload
 OFC_DISCOVER_IPV4 | ON/OFF | Support IPv4 Network Addresses
 OFC_DISCOVER_IPV6 | ON/OFF | Support IPv6 Network Addresses
 
-===================
-Debug Configuration
-===================
+### Debug Configuration
 
 Configurations that govern debug options within Open Files
 
@@ -121,9 +115,7 @@ OFC_HEAP_IMPL | cheap | Heap implementation to use, binheap/cheap
 binheap is a custom implementation of a binary heap with additional debug
 capabilities.  cheap is a wrapper for the libc malloc/free library.
 
-======================
-Identity Configuration
-======================
+### Identity Configuration
 
 Configurations that set the default platform identity.  These
 can be overwritten by the persistent runtime configuration file or
@@ -141,9 +133,7 @@ OFC_DEFAULT_SCOPE | | Default NetBIOS scope
 OFC_DEFAULT_DESCR | Open Files | Default System Description
 OFC_DEFAULT_DOMAIN | WORKGROUP | Default System Domain
 
-====================
-Sizing Configuration
-====================
+### Sizing Configuration
 
 Configurations that manage sizing of the Open Files stack.  The default
 sizing configuration has been qualified as optimal.  You may find a need
@@ -161,9 +151,7 @@ OFC_MAX_SCHED_WAIT | 4000 | Maximum scheduler sleep (eg. 4000)
 OFC_MAX_IO | 65536 | Maximum IO Buffer Size for Streaming (eg. 65536)
 OFC_CALL_STACK_SIZE | 32768 | Maximum Buffer To Map for I/O (eg. 32768)
 
-=================
-JNI Configuration
-=================
+### JNI Configuration
 
 If building with a Java Native Interface for the OpenFiles SMB stack,
 there are configuration items required to build in the JNI layer.
@@ -181,9 +169,7 @@ OPENFILES_SMB_JNI | ON/OFF | Build a SMB JNI library
 
 The list of includes are:
 
-==============
-SMB Enablement
-==============
+### SMB Enablement
 
 If building in the SMB support into OpenFiles, there is the enablement
 of SMB, and then a separate SMB Configuration.
@@ -220,9 +206,7 @@ The lan manager applications supported by OpenFiles are
 - srvsvc: Server Services
 - wkssvc: Workstation Services
 
-============
-SMB Behavior
-============
+### SMB Behavior
 
 The SMB Behavior is defined in:
 
@@ -267,9 +251,7 @@ OFC_TEST_FS_SMB_PATH can be overridden in runtime configuration
 OFC_NTLMV2_TARGET_TIMESTAMP is non standard and allows client/server time 
 synchronization during NTLM authentication
 
-====================
-Cipher Configuration
-====================
+### Cipher Configuration
 
 When buiding in SMBv3 support, a Cipher needs to be configured.
 
