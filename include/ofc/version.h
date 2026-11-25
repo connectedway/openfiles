@@ -26,19 +26,19 @@
  * - 4.* Rebrand to ConnectedSMB, Add Android/iOS (2015-2021)
  * - 5.* Rebrand to Open Files, Change build/packaging (2021-present)
  */
-#define OFC_SHARE_MAJOR 5
+#define OFC_SHARE_MAJOR 6
 /**
  * Minor Version.  Updated with new functionality.  
  *
  * Currently we are at the initial release of OpenFiles 5
  */
-#define OFC_SHARE_MINOR 3
+#define OFC_SHARE_MINOR 0
 /**
  * Tag or patch level.
  *
  * May be a commit id, tag, or id.
  */
-#define OFC_SHARE_TAG "api36"
+#define OFC_SHARE_TAG "v6.0.1"
 
 /** \} */
 
